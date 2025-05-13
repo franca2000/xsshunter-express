@@ -1,19 +1,7 @@
-const API_BASE_PATH = `/api/v1/`;
-const ADMIN_PASSWORD_SETTINGS_KEY = 'ADMIN_PASSWORD';
-const CORRELATION_API_SECRET_SETTINGS_KEY = 'CORRELATION_API_KEY';
-const CHAINLOAD_URI_SETTINGS_KEY = 'CHAINLOAD_URI';
-const PAGES_TO_COLLECT_SETTINGS_KEY = 'PAGES_TO_COLLECT';
-const SEND_ALERT_EMAILS_KEY = 'SEND_ALERT_EMAILS';
-const session_secret_key = 'SESSION_SECRET';
-const csrf_header_name = 'X-CSRF-Buster';
-
 module.exports = {
-    API_BASE_PATH,
-    session_secret_key,
-    ADMIN_PASSWORD_SETTINGS_KEY,
-    CORRELATION_API_SECRET_SETTINGS_KEY,
-    CHAINLOAD_URI_SETTINGS_KEY,
-    PAGES_TO_COLLECT_SETTINGS_KEY,
-    SEND_ALERT_EMAILS_KEY,
-    csrf_header_name,
+  domain: "xsshunter-express-7f8o.onrender.com", // tu dominio real sin https
+  httpPort: process.env.PORT || 3000,
+  useHTTPS: false, // desactivamos HTTPS interno, porque Render ya lo maneja
+  maintainerEmail: "francisco@ejemplo.com", // cualquier email, solo para evitar el error
+  enableLogging: true
 };
